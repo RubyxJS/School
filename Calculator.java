@@ -1,8 +1,10 @@
 import java.util.Scanner;
+
 class Calculator {
     public static void main(String[] args) {
+        // creat scanner for inputing values from the console
         Scanner consoleIo = new Scanner(System.in);
-
+        // ask and recieve volume, mass and density values
         System.out.println("Please input volume, mass and density");
         System.out.println("Volume:");
         double volume = consoleIo.nextInt();
@@ -11,28 +13,30 @@ class Calculator {
         System.out.println("Density:");
         double density = consoleIo.nextInt();
 
-        while(true){
-        System.out.println("For calculating volume press 1");
-        System.out.println("For calculating mass press 2");
-        System.out.println("For calculating density press 3");
-        System.out.println("To end program enter 4 ");
+        // loops the program if a condition is met
+        while (true) {
+            // asks the user what they would like to do
+            System.out.println("For calculating volume press 1");
+            System.out.println("For calculating mass press 2");
+            System.out.println("For calculating density press 3");
+            System.out.println("To end program enter 4 ");
+            int choice = consoleIo.nextInt();
 
-        int choice = consoleIo.nextInt();
-
-            if(choice <= 0){
+            // Performs different actions depending on the "choice" value
+            if (choice <= 0) {
                 System.out.println("Invalid input");
-            } else if(choice >= 5) {
+            } else if (choice >= 5) {
                 System.out.println("Invalid input");
-            } else if(choice == 4) {
+            } else if (choice == 4) {
                 break;
             } else if (choice == 1) {
-                double answer = mass/density;
+                double answer = mass / density;
                 System.out.println("The Volume is: 34" + answer);
-            }else if(choice == 2){
-                double answer = density*volume;
+            } else if (choice == 2) {
+                double answer = density * volume;
                 System.out.println("The Mass is: 22");
-            }else if(choice == 3){
-                double answer = mass/volume;
+            } else if (choice == 3) {
+                double answer = mass / volume;
                 System.out.println("The Density is " + answer);
             }
         }
