@@ -4,14 +4,6 @@ class Calculator {
     public static void main(String[] args) {
         // creat scanner for inputing values from the console
         Scanner consoleIo = new Scanner(System.in);
-        // ask and recieve volume, mass and density values
-        System.out.println("Please input volume, mass and density");
-        System.out.println("Volume:");
-        double volume = consoleIo.nextInt();
-        System.out.println("Mass:");
-        double mass = consoleIo.nextInt();
-        System.out.println("Density:");
-        double density = consoleIo.nextInt();
 
         // loops the program if a condition is met
         while (true) {
@@ -29,13 +21,31 @@ class Calculator {
                 System.out.println("Invalid input");
             } else if (choice == 4) {
                 break;
+                
             } else if (choice == 1) {
+                System.out.println("Please input mass and density");
+                System.out.println("Density:");
+                double density = consoleIo.nextInt();
+                System.out.println("Mass:");
+                double mass = consoleIo.nextInt();
                 double answer = mass / density;
-                System.out.println("The Volume is: 34" + answer);
+                System.out.println("The Volume is: " + answer);
+
             } else if (choice == 2) {
+                System.out.println("Please input volume and density");
+                System.out.println("Density:");
+                double density = consoleIo.nextInt();
+                System.out.println("Volume:");
+                double volume = consoleIo.nextInt();
                 double answer = density * volume;
-                System.out.println("The Mass is: 22");
+                System.out.println("The Mass is: " + answer);
+
             } else if (choice == 3) {
+                System.out.println("Please input mass and volume");
+                System.out.println("Volume:");
+                double volume = consoleIo.nextInt();
+                System.out.println("Mass:");
+                double mass = consoleIo.nextInt();
                 double answer = mass / volume;
                 System.out.println("The Density is " + answer);
             }
